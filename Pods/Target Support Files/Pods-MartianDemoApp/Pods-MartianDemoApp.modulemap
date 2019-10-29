@@ -1,0 +1,6 @@
+module Pods_MartianDemoApp {
+  umbrella header "Pods-MartianDemoApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
