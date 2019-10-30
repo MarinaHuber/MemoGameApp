@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoCollectionViewCell" customModule="MartianDemoApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="vXn-De-uji">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="342"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Dtp-4T-9h7">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="342"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TUh-az-JAa">
+                        <rect key="frame" x="0.0" y="0.0" width="336" height="342"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="TUh-az-JAa" secondAttribute="trailing" id="Sm8-GC-aZg"/>
+                    <constraint firstItem="TUh-az-JAa" firstAttribute="leading" secondItem="Dtp-4T-9h7" secondAttribute="leading" id="khW-ew-5gX"/>
+                    <constraint firstItem="TUh-az-JAa" firstAttribute="top" secondItem="Dtp-4T-9h7" secondAttribute="top" id="tUv-n0-g2f"/>
+                    <constraint firstAttribute="bottom" secondItem="TUh-az-JAa" secondAttribute="bottom" id="tqO-rX-WAw"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="336" height="342"/>
+            <point key="canvasLocation" x="-382.60869565217394" y="-250.44642857142856"/>
+        </collectionViewCell>
+    </objects>
+</document>

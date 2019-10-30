@@ -10,19 +10,17 @@ import UIKit
 
 class AlbumsViewControllerDataSource: NSObject {
 
-	// MARK: - Properties
+// MARK: - Properties
 	private var albumsList: [Album] = []
 	private var selectedAlbum: Album?
 
-	// MARK: - Init
+// MARK: - Init
 	init(with albumsList: [Album], tableView: UITableView) {
 		super.init()
 		self.albumsList = albumsList
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.rowHeight = UITableView.automaticDimension
-
-		tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "albumCell")
 	}
 }
 // MARK: - DataSource

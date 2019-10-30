@@ -11,20 +11,21 @@ import UIKit
 class PhotosViewControllerDataSource: NSObject {
 
 // MARK: - Properties
-//	private var photoList: [Photo] = []
-//
-//// MARK: - Init
-//init(with albumsList: [Photo], tableView: UICollectionView) {
-//	super.init()
-//	self.photoList = photoList
-//
-//	self.registerCells(in: collectionView)
-//}
-//
-//// MARK: - Helper
-//private func registerCells(in collectionView: UITableView) {
-//	tableView.register(cellType: PhotoCollectionViewCell.self)
-//}
+	private var photosList: [Photo] = []
+
+// MARK: - Init
+init(with photosList: [Photo], collectionView: UICollectionView) {
+	super.init()
+	self.photosList = photosList
+
+	self.registerCells(in: collectionView)
+}
+
+// MARK: - Helper
+private func registerCells(in collectionView: UICollectionView) {
+	collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: "photoCell")
+}
+	
 }
 
 // MARK: - DataSource
@@ -33,12 +34,15 @@ extension PhotosViewControllerDataSource: UICollectionViewDataSource {
 		return 1
     }
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		1
+		self.photosList.count
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let photo = self.photosList.item(at: indexPath.row) else {
+            return UICollectionViewCell()
+        }
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell ?? PhotoCollectionViewCell()
-		//(cell as? PhotoCollectionViewCell)?.configure(with: photoList)
+		cell.configure(with: [photo])
 		return cell
 	}
 
