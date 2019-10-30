@@ -12,10 +12,18 @@ class PhotosViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		loadPhotos()
 	}
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+	}
+
+	func loadPhotos() {
+	NetworkApi.getPhotosByAlbumID(22, completionHandler: {
+		pLoaded, error in
+
+	})
 	}
 
     override func viewDidDisappear(_ animated: Bool) {

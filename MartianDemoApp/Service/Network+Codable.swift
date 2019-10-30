@@ -30,9 +30,8 @@ enum NetworkResult<T> {
 class NetworkApi {
 
 	public static func getAlbums(completionHandler: @escaping (_ result: [Album], Error?) -> Void) {
-		let request = APIServiceRouter.albums(.get)
-		Alamofire.request(request).responseJSON {
-			(response) in
+		let request = APIServiceRouter.albums
+		Alamofire.request(request).responseJSON { (response) in
 			debugPrint(response)
 			guard let data = response.data else { return }
 
@@ -53,22 +52,23 @@ class NetworkApi {
 
 
 	public static func getPhotosByAlbumID(_ albumID: Int, completionHandler: @escaping (_ result: [Photo], Error?) -> Void) {
-		let request = APIServiceRouter.photosByAlbumID(albumID, .get)
+		let request = APIServiceRouter.photosByAlbumID(albumID)
 		Alamofire.request(request).responseJSON { (response) in
-//			guard let data = response.data else { return }
-//
-//			do {
-//				let decoder = JSONDecoder()
-//				let albumDecoded = try decoder.decode([Photo].self, from: data)
-//				for photo in photos! {
-//					print(album.name ?? "")
-//					}
-//
-//				completionHandler(photos!, nil)
-//
-//			} catch {
-//				completionHandler ([], error as NSError?)
-//			}
+			guard let data = response.data else { return }
+			debugPrint(response)
+
+			do {
+				let decoder = JSONDecoder()
+				let photosDecoded = try decoder.decode([Photo].self, from: data)
+				for photo in photosDecoded {
+					print(photo.id ?? "")
+					}
+
+				completionHandler(photosDecoded, nil)
+
+			} catch let error {
+				completionHandler ([], error as NSError?)
+			}
 			}.resume()
 	}
 

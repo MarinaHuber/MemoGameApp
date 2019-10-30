@@ -15,14 +15,14 @@ class AlbumsViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		showAlbums()
+		loadAlbums()
 	}
-	func showAlbums() {
+	func loadAlbums() {
 		NetworkApi.getAlbums(completionHandler: {
 			albumsLoaded, error in
 			self.setDateSource(with: albumsLoaded)
 			self.reloadTableUIAnimate()
-			
+
 		})
 	}
     // MARK: - Setup
