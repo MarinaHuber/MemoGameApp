@@ -32,7 +32,7 @@ class AlbumsViewController: UIViewController {
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		self.tableView.reloadData()
+		self.reloadTableUIAnimate()
 	}
 
 	override func viewDidDisappear(_ animated: Bool) {
