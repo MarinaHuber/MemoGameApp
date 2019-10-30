@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59E6B71D1893C98B840CD79C /* libPods-MartianDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC4BF9094E5B6EB9996906A /* libPods-MartianDemoApp.a */; };
+		9C10BB6E2369810C00E4BE4A /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C10BB6D2369810B00E4BE4A /* Array+Extension.swift */; };
 		9C1FBED32368256700FFADF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBED22368256700FFADF7 /* AppDelegate.swift */; };
 		9C1FBED72368256700FFADF7 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBED62368256700FFADF7 /* AlbumsViewController.swift */; };
 		9C1FBEDA2368256700FFADF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1FBED82368256700FFADF7 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		1EC4BF9094E5B6EB9996906A /* libPods-MartianDemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MartianDemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B23148D377DA5DAF21552F /* Pods-MartianDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MartianDemoApp.release.xcconfig"; path = "Target Support Files/Pods-MartianDemoApp/Pods-MartianDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		9C10BB6D2369810B00E4BE4A /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		9C1FBECF2368256700FFADF7 /* MartianDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MartianDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1FBED22368256700FFADF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C1FBED62368256700FFADF7 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				9C1FBF002368695E00FFADF7 /* Animate+UIView.swift */,
+				9C10BB6D2369810B00E4BE4A /* Array+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				9C1FBED72368256700FFADF7 /* AlbumsViewController.swift in Sources */,
 				9C1FBEEE23685A4800FFADF7 /* PhotosViewControllerDataSource.swift in Sources */,
 				9C1FBEFC2368607800FFADF7 /* AlbumTableViewCell.swift in Sources */,
+				9C10BB6E2369810C00E4BE4A /* Array+Extension.swift in Sources */,
 				9C6789F52368BDFC0039FEA9 /* PhotoRealm.swift in Sources */,
 				9C1FBEEA2368567D00FFADF7 /* PhotosViewController.swift in Sources */,
 				9C1FBEFA23685E2A00FFADF7 /* Photo.swift in Sources */,

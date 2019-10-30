@@ -29,6 +29,9 @@ class PhotosViewControllerDataSource: NSObject {
 
 // MARK: - DataSource
 extension PhotosViewControllerDataSource: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+		return 1
+    }
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		1
 	}

@@ -10,30 +10,34 @@ import UIKit
 
 class AlbumsViewControllerDataSource: NSObject {
 
-// MARK: - Properties
+	// MARK: - Properties
 	private var albumsList: [Album] = []
 	private var selectedAlbum: Album?
 
-// MARK: - Init
-init(with albumsList: [Album], tableView: UITableView) {
-	super.init()
-	self.albumsList = albumsList
-	tableView.delegate = self
-	tableView.dataSource = self
-	tableView.rowHeight = UITableView.automaticDimension
+	// MARK: - Init
+	init(with albumsList: [Album], tableView: UITableView) {
+		super.init()
+		self.albumsList = albumsList
+		tableView.delegate = self
+		tableView.dataSource = self
+		tableView.rowHeight = UITableView.automaticDimension
 
-	tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "albumCell")
-}
+		tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "albumCell")
+	}
 }
 // MARK: - DataSource
 extension AlbumsViewControllerDataSource: UITableViewDataSource {
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return self.albumsList.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let albumElement = self.albumsList.item(at: indexPath.row) else {
+            return UITableViewCell()
+        }
 		let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as? AlbumTableViewCell ?? AlbumTableViewCell()
-		cell.configure(with: albumsList)
+		cell.configure(with: [albumElement])
 		return cell
 	}
 

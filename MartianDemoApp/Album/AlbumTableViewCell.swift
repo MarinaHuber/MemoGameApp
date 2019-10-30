@@ -13,7 +13,7 @@ typealias AlbumSelectionHandler = ([Album]?) -> Void
 class AlbumTableViewCell: UITableViewCell, AlbumSelectionProtocol {
 	// MARK: - Properties
 	private var selectionHandler: AlbumSelectionHandler?
-	private var album: [Album]?
+	private var albums: [Album]?
 
     // MARK: - LifeCycle
     override func awakeFromNib() {
@@ -27,11 +27,10 @@ class AlbumTableViewCell: UITableViewCell, AlbumSelectionProtocol {
 
 	// MARK: - Configuration
 	internal func configure(with album: [Album]?) {
-		self.album = album
-		self.textLabel?.text = "test aaaaaa"
-		//_ = album?.map {
-			//self.textLabel?.text = $0.title
-		//}
+		self.albums = album
+		albums?.forEach {
+			self.textLabel?.text = $0.title
+		}
 	}
 
 	internal func configure(with selectionHandler: AlbumSelectionHandler?) {
@@ -44,5 +43,7 @@ protocol AlbumSelectionProtocol {
 
     func configure(with selectionHandler: AlbumSelectionHandler?)
 }
+
+
 
 

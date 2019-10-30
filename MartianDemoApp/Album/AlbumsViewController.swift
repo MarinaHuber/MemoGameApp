@@ -20,21 +20,19 @@ class AlbumsViewController: UIViewController {
 	func showAlbums() {
 		NetworkApi.getAlbums(completionHandler: {
 			albumsLoaded, error in
-			guard albumsLoaded != nil else { return }
 			self.setDateSource(with: albumsLoaded)
+			self.reloadTableUIAnimate()
 			
 		})
 	}
     // MARK: - Setup
-    private func setDateSource(with album: [Album]) {
-
-		self.dataSource = AlbumsViewControllerDataSource(with: album, tableView: self.tableView)
-
-        self.reloadTableUIAnimate()
+    private func setDateSource(with albums: [Album]) {
+		self.dataSource = AlbumsViewControllerDataSource(with: albums, tableView: self.tableView)
     }
 
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		self.tableView.reloadData()
 	}
 
 	override func viewDidDisappear(_ animated: Bool) {
