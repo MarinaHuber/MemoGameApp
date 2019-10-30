@@ -9,6 +9,9 @@
 import Foundation
 
 // MARK: - Album
+struct AlbumList: Codable {
+	let album: [Album]?
+}
 struct Album: Codable {
 	let userID: Int?
 	let id: Int?

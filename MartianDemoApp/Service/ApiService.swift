@@ -11,22 +11,23 @@ import Alamofire
 
 public enum APIServiceRouter: URLRequestConvertible {
 
-	static let BASE_URL = "https://demo.martian.agency/api"
+	//change and add path to uri
+	static let BASE_URL = "https://demo.martian.agency/api/albums"
 	static let header_KEY = "bWFydGlhbmFuZG1hY2hpbmU="
 
-	case albums(String, HTTPMethod)
-	case photosByAlbumID(String, HTTPMethod)
+	case albums(HTTPMethod)
+	case photosByAlbumID(Int, HTTPMethod)
 
 	public func asURLRequest() throws -> URLRequest {
 		var request = URLRequest(url: self.url!)
-		request.httpMethod = self.method.rawValue
+		request.httpMethod = self.method.rawValue.uppercased()
 		request.addValue(APIServiceRouter.header_KEY, forHTTPHeaderField: "x-auth")
 		return request
 	}
 //	// in case addition CRUD & Authorization a secret token
 	var method: HTTPMethod {
 		switch self {
-		case .albums(_, let method): return method
+		case .albums(let method): return method
 		case .photosByAlbumID(_, let method): return method
 		}
 	}

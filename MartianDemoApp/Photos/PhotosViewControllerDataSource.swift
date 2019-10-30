@@ -26,3 +26,26 @@ class PhotosViewControllerDataSource: NSObject {
 //	tableView.register(cellType: PhotoCollectionViewCell.self)
 //}
 }
+
+// MARK: - DataSource
+extension PhotosViewControllerDataSource: UICollectionViewDataSource {
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		1
+	}
+
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell ?? PhotoCollectionViewCell()
+		//(cell as? PhotoCollectionViewCell)?.configure(with: photoList)
+		return cell
+	}
+
+}
+
+// MARK: - Delegate
+extension PhotosViewControllerDataSource: UICollectionViewDelegate {
+
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+
+        return 60
+    }
+}

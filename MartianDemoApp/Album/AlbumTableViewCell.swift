@@ -8,17 +8,41 @@
 
 import UIKit
 
-class AlbumTableViewCell: UITableViewCell {
-	//private var selectionHandler: AlbumSelectionHandler?
+typealias AlbumSelectionHandler = ([Album]?) -> Void
 
-	// MARK: - Configuration
-	internal func configure(with articleTeaserList: [Album]) {
+class AlbumTableViewCell: UITableViewCell, AlbumSelectionProtocol {
+	// MARK: - Properties
+	private var selectionHandler: AlbumSelectionHandler?
+	private var album: [Album]?
+
+    // MARK: - LifeCycle
+    override func awakeFromNib() {
+		super.awakeFromNib()
 	}
 
-//	func configure(with selectionHandler: AlbumSelectionHandler?) {
-//		self.selectionHandler = selectionHandler
-//	}
+	override func prepareForReuse() {
+		super.prepareForReuse()
+		self.textLabel?.text = nil
+	}
 
+	// MARK: - Configuration
+	internal func configure(with album: [Album]?) {
+		self.album = album
+		self.textLabel?.text = "test aaaaaa"
+		//_ = album?.map {
+			//self.textLabel?.text = $0.title
+		//}
+	}
+
+	internal func configure(with selectionHandler: AlbumSelectionHandler?) {
+		self.selectionHandler = selectionHandler
+	}
+
+}
+
+protocol AlbumSelectionProtocol {
+
+    func configure(with selectionHandler: AlbumSelectionHandler?)
 }
 
 

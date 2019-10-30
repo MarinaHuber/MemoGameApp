@@ -11,23 +11,40 @@ import UIKit
 class AlbumsViewControllerDataSource: NSObject {
 
 // MARK: - Properties
-//	private var albumsList: [Album] = []
-//	private var selectedAlbum: Album?
-//
-//// MARK: - Init
-//init(with albumsList: [Album], selectedAlbum: Album?, tableView: UITableView) {
-//	super.init()
-//	self.albumsList = albumsList
-//	self.selectedAlbum = selectedAlbum
-//	tableView.rowHeight = UITableView.automaticDimension
-//
-//	self.registerCells(in: tableView)
-//}
-//
-//// MARK: - Helper
-//private func registerCells(in tableView: UITableView) {
-//	tableView.register(cellType: AlbumTableViewCell.self)
-//}
+	private var albumsList: [Album] = []
+	private var selectedAlbum: Album?
+
+// MARK: - Init
+init(with albumsList: [Album], tableView: UITableView) {
+	super.init()
+	self.albumsList = albumsList
+	tableView.delegate = self
+	tableView.dataSource = self
+	tableView.rowHeight = UITableView.automaticDimension
+
+	tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "albumCell")
+}
+}
+// MARK: - DataSource
+extension AlbumsViewControllerDataSource: UITableViewDataSource {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return self.albumsList.count
+	}
+
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as? AlbumTableViewCell ?? AlbumTableViewCell()
+		cell.configure(with: albumsList)
+		return cell
+	}
+
+}
+
+// MARK: - Delegate
+extension AlbumsViewControllerDataSource: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
 }
 
 
