@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import  RealmSwift
 
 class AlbumsViewController: UIViewController {
 
 	private var dataSource: AlbumsViewControllerDataSource?
 	@IBOutlet weak var tableView: UITableView!
+	private var albumsList: [Album] = []
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -60,5 +62,18 @@ class AlbumsViewController: UIViewController {
 		})
 
 	}
+
+
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		super.prepare(for: segue, sender: sender)
+		if let indexPath = self.tableView.indexPathForSelectedRow, segue.identifier == "photoSegue" {
+				let albumElement = self.albumsList.item(at: indexPath.row)
+				let vc = segue.destination as! PhotosViewController
+				vc.albumID = albumElement?.id
+		}
+
+	}
+
+
 }
 

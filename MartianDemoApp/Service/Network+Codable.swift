@@ -32,7 +32,7 @@ class NetworkApi {
 	public static func getAlbums(completionHandler: @escaping (_ result: [Album], Error?) -> Void) {
 		let request = APIServiceRouter.albums
 		Alamofire.request(request).responseJSON { (response) in
-			debugPrint(response)
+			//debugPrint(response)
 			guard let data = response.data else { return }
 
 			do {

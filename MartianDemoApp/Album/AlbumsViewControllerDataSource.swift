@@ -47,6 +47,10 @@ extension AlbumsViewControllerDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+	}
 }
 
 

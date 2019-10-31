@@ -18,11 +18,14 @@ class AlbumTableViewCell: UITableViewCell, AlbumSelectionProtocol {
     // MARK: - LifeCycle
     override func awakeFromNib() {
 		super.awakeFromNib()
+		textLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+		textLabel?.numberOfLines = 0
+
 	}
 
 	override func prepareForReuse() {
 		super.prepareForReuse()
-		self.textLabel?.text = nil
+		textLabel?.text = nil
 	}
 
 	// MARK: - Configuration
@@ -40,7 +43,6 @@ class AlbumTableViewCell: UITableViewCell, AlbumSelectionProtocol {
 }
 
 protocol AlbumSelectionProtocol {
-
     func configure(with selectionHandler: AlbumSelectionHandler?)
 }
 
