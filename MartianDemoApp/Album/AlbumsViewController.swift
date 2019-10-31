@@ -11,38 +11,38 @@ import  RealmSwift
 
 class AlbumsViewController: UIViewController {
 
+	// MARK: - Properties
 	private var dataSource: AlbumsViewControllerDataSource?
 	@IBOutlet weak var tableView: UITableView!
-	private var albumsList: [Album] = []
 
+	// MARK: - LifeCycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		loadAlbums()
 	}
-	func loadAlbums() {
-		NetworkApi.getAlbums(completionHandler: {
-			albumsLoaded, error in
-			self.setDateSource(with: albumsLoaded)
-			self.reloadTableUIAnimate()
-
-		})
-	}
-    // MARK: - Setup
-    private func setDateSource(with albums: [Album]) {
-		self.dataSource = AlbumsViewControllerDataSource(with: albums, tableView: self.tableView)
-    }
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		self.reloadTableUIAnimate()
 	}
 
-	override func viewDidDisappear(_ animated: Bool) {
-		super.viewDidDisappear(animated)
+	// MARK: - Setup
+	func loadAlbums() {
+		NetworkApi.getAlbums(completionHandler: {
+			albumsLoaded, error in
+			self.setDateSource(with: albumsLoaded)
+			self.reloadTableUIAnimate()
+		})
 	}
 
-	private func reloadTableUIAnimate() {
+	private func setDateSource(with albums: [Album]) {
+		self.dataSource = AlbumsViewControllerDataSource(with: albums, tableView: self.tableView, selectionHandler: { [weak self] (albums) in
+			self?.showPhotosViewController(with: albums)
+		})
+	}
 
+	// MARK: - Reload UI
+	private func reloadTableUIAnimate() {
 		DispatchQueue.main.async(execute: { () -> Void in
 			self.tableView.reloadData()
 			let visibleInexPaths = self.tableView.indexPathsForVisibleRows
@@ -51,29 +51,28 @@ class AlbumsViewController: UIViewController {
 
 				$0.map {
 					let cell = self.tableView.cellForRow(at: $0)
-					cell?.animateStart(0.8, delay: Double($0.row) * 0.03, completion: {
+					cell?.animateStart(0.9, delay: Double($0.row) * 0.05, completion: {
 						completed in
-
 					})
-
 				}
 			}
-
 		})
-
 	}
 
-
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		super.prepare(for: segue, sender: sender)
-		if let indexPath = self.tableView.indexPathForSelectedRow, segue.identifier == "photoSegue" {
-				let albumElement = self.albumsList.item(at: indexPath.row)
-				let vc = segue.destination as! PhotosViewController
-				vc.albumID = albumElement?.id
+	// MARK: - Helper
+	private func showPhotosViewController(with albums: [Album]?) {
+		guard let albums = albums else {
+			return
+		}
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let vc = storyboard.instantiateViewController(withIdentifier: "PhotosViewController") as? PhotosViewController ?? PhotosViewController()
+		vc.configure(with: albums)
+		self.navigationController?.pushViewController(vc, animated: true)
+		albums.forEach {
+			guard let id = $0.id else { return }
+			_ = id
 		}
 
 	}
 
-
 }
-

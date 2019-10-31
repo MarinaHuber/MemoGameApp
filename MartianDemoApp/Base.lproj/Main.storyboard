@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ofJ-hw-kH8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Albums View Controller-->
+        <!--Albums-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AlbumsViewController" customModule="MartianDemoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,9 +38,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <segue destination="zrK-Qj-jh5" kind="show" identifier="photoSegue" id="YAQ-tg-PKs"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -53,7 +51,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nG8-nE-DOK"/>
+                    <navigationItem key="navigationItem" title="Albums" id="nG8-nE-DOK"/>
                     <connections>
                         <outlet property="tableView" destination="mIA-lL-P46" id="olC-po-Fuv"/>
                     </connections>
@@ -62,17 +60,77 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
-        <!--Photos View Controller-->
+        <!--Album Items-->
         <scene sceneID="QzK-sa-F2o">
             <objects>
-                <viewController id="zrK-Qj-jh5" customClass="PhotosViewController" customModule="MartianDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotosViewController" id="zrK-Qj-jh5" customClass="PhotosViewController" customModule="MartianDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="klN-Te-Lks">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GnK-lC-rdd">
+                                <rect key="frame" x="0.0" y="85" width="414" height="811"/>
+                                <color key="backgroundColor" name="GrayLightMartian"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="srd-1e-YCb">
+                                    <size key="itemSize" width="244" height="230"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="photoCell" id="9r5-eQ-aIZ" customClass="PhotoCollectionViewCell" customModule="MartianDemoApp" customModuleProvider="target">
+                                        <rect key="frame" x="85" y="0.0" width="244" height="230"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="h1e-UW-aYG">
+                                            <rect key="frame" x="0.0" y="0.0" width="244" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BYj-jL-TUE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="244" height="230"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgL-2L-lqQ">
+                                                    <rect key="frame" x="24" y="22" width="48" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="lgL-2L-lqQ" secondAttribute="height" multiplier="24:25" id="2tX-5Q-Z62"/>
+                                                        <constraint firstAttribute="height" constant="50" id="okn-cp-VHu"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="xF8-E2-f5K"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="un_bookmark"/>
+                                                    <connections>
+                                                        <action selector="actionBookmark:" destination="9r5-eQ-aIZ" eventType="touchUpInside" id="id0-2R-f6R"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lgL-2L-lqQ" secondAttribute="trailing" constant="20" symbolic="YES" id="gCU-ai-a3S"/>
+                                                <constraint firstItem="lgL-2L-lqQ" firstAttribute="top" secondItem="h1e-UW-aYG" secondAttribute="top" constant="22" id="iiO-Sl-t2y"/>
+                                                <constraint firstItem="lgL-2L-lqQ" firstAttribute="leading" secondItem="h1e-UW-aYG" secondAttribute="leading" constant="24" id="mfu-VN-bUb"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="244" height="230"/>
+                                        <connections>
+                                            <outlet property="bookmark" destination="lgL-2L-lqQ" id="7wD-Az-Gh6"/>
+                                            <outlet property="collectionImageView" destination="BYj-jL-TUE" id="c4y-bb-iaN"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="RedMartian"/>
+                        <constraints>
+                            <constraint firstItem="GnK-lC-rdd" firstAttribute="top" secondItem="bRi-0j-unE" secondAttribute="top" constant="41" id="QBO-fG-MMh"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="GnK-lC-rdd" secondAttribute="bottom" constant="-34" id="bNv-0E-4Ic"/>
+                            <constraint firstItem="GnK-lC-rdd" firstAttribute="leading" secondItem="bRi-0j-unE" secondAttribute="leading" id="c8E-lv-Abl"/>
+                            <constraint firstItem="GnK-lC-rdd" firstAttribute="centerX" secondItem="klN-Te-Lks" secondAttribute="centerX" id="vOe-cE-B9p"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bRi-0j-unE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0ig-qX-v24"/>
+                    <navigationItem key="navigationItem" title="Album Items" largeTitleDisplayMode="always" id="Fo7-QX-Wo0"/>
+                    <connections>
+                        <outlet property="photoCollectionView" destination="GnK-lC-rdd" id="eY7-gT-jeL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFB-bW-IpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,5 +154,29 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="6RD-J1-OYD">
+            <objects>
+                <viewController id="e49-ID-xIu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5s8-gn-2D0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gtb-eS-tVX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dL-no-gcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2577" y="130"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="un_bookmark" width="256" height="256"/>
+        <namedColor name="GrayLightMartian">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RedMartian">
+            <color red="0.93725490196078431" green="0.25098039215686274" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -10,15 +10,16 @@ import UIKit
 
 class AlbumsViewControllerDataSource: NSObject {
 
-// MARK: - Properties
+	// MARK: - Properties
+	private var selection: SelectionHandler?
 	private var albumsList: [Album] = []
 	private var selectedAlbum: Album?
 
-// MARK: - Init
-	init(with albumsList: [Album], tableView: UITableView) {
+	// MARK: - Init
+	init(with albumsList: [Album], tableView: UITableView, selectionHandler: SelectionHandler?) {
 		super.init()
 		self.albumsList = albumsList
-		tableView.delegate = self
+		self.selection = selectionHandler
 		tableView.dataSource = self
 		tableView.rowHeight = UITableView.automaticDimension
 	}
@@ -31,26 +32,12 @@ extension AlbumsViewControllerDataSource: UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let albumElement = self.albumsList.item(at: indexPath.row) else {
-            return UITableViewCell()
-        }
+		guard let albumElement = self.albumsList.item(at: indexPath.row) else {
+			return UITableViewCell()
+		}
 		let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as? AlbumTableViewCell ?? AlbumTableViewCell()
+		cell.configure(with: self.selection)
 		cell.configure(with: [albumElement])
 		return cell
 	}
-
 }
-
-// MARK: - Delegate
-extension AlbumsViewControllerDataSource: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
-    }
-
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		
-	}
-}
-
-

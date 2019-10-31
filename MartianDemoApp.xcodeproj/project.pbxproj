@@ -13,7 +13,6 @@
 		9C1FBED72368256700FFADF7 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBED62368256700FFADF7 /* AlbumsViewController.swift */; };
 		9C1FBEDA2368256700FFADF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1FBED82368256700FFADF7 /* Main.storyboard */; };
 		9C1FBEDD2368256700FFADF7 /* MartianDemoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBEDB2368256700FFADF7 /* MartianDemoApp.xcdatamodeld */; };
-		9C1FBEDF2368256A00FFADF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1FBEDE2368256A00FFADF7 /* Assets.xcassets */; };
 		9C1FBEE22368256A00FFADF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1FBEE02368256A00FFADF7 /* LaunchScreen.storyboard */; };
 		9C1FBEEA2368567D00FFADF7 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBEE92368567D00FFADF7 /* PhotosViewController.swift */; };
 		9C1FBEEC236858EF00FFADF7 /* AlbumsViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBEEB236858EF00FFADF7 /* AlbumsViewControllerDataSource.swift */; };
@@ -27,6 +26,10 @@
 		9C1FBF012368695E00FFADF7 /* Animate+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBF002368695E00FFADF7 /* Animate+UIView.swift */; };
 		9C46A076236AABE1005C206F /* AlbumRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46A075236AABE1005C206F /* AlbumRealm.swift */; };
 		9C6789F52368BDFC0039FEA9 /* PhotoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6789F42368BDFC0039FEA9 /* PhotoRealm.swift */; };
+		9CB1D9F8236B7AB400652355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1D9F7236B7AB400652355 /* Assets.xcassets */; };
+		9CB1D9FB236B7DE700652355 /* SavePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1D9FA236B7DE700652355 /* SavePhotoViewController.swift */; };
+		9CB1D9FD236B7FCA00652355 /* SaveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1D9FC236B7FCA00652355 /* SaveCollectionViewCell.swift */; };
+		9CDAA910236AC146006452FD /* Realm+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDAA90F236AC146006452FD /* Realm+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +41,6 @@
 		9C1FBED62368256700FFADF7 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		9C1FBED92368256700FFADF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C1FBEDC2368256700FFADF7 /* MartianDemoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MartianDemoApp.xcdatamodel; sourceTree = "<group>"; };
-		9C1FBEDE2368256A00FFADF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C1FBEE12368256A00FFADF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C1FBEE32368256A00FFADF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C1FBEE92368567D00FFADF7 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,10 @@
 		9C1FBF002368695E00FFADF7 /* Animate+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animate+UIView.swift"; sourceTree = "<group>"; };
 		9C46A075236AABE1005C206F /* AlbumRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRealm.swift; sourceTree = "<group>"; };
 		9C6789F42368BDFC0039FEA9 /* PhotoRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRealm.swift; sourceTree = "<group>"; };
+		9CB1D9F7236B7AB400652355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CB1D9FA236B7DE700652355 /* SavePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhotoViewController.swift; sourceTree = "<group>"; };
+		9CB1D9FC236B7FCA00652355 /* SaveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCollectionViewCell.swift; sourceTree = "<group>"; };
+		9CDAA90F236AC146006452FD /* Realm+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Extension.swift"; sourceTree = "<group>"; };
 		EBE0E4C0F0B64CE8873762DF /* Pods-MartianDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MartianDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-MartianDemoApp/Pods-MartianDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,9 +100,10 @@
 				9C1FBEF123685B0900FFADF7 /* Model */,
 				9C1FBEEF23685AD500FFADF7 /* Album */,
 				9C1FBEF023685AF800FFADF7 /* Photos */,
+				9CB1D9F9236B7DB900652355 /* SavedPhoto */,
 				9C1FBED22368256700FFADF7 /* AppDelegate.swift */,
 				9C1FBED82368256700FFADF7 /* Main.storyboard */,
-				9C1FBEDE2368256A00FFADF7 /* Assets.xcassets */,
+				9CB1D9F7236B7AB400652355 /* Assets.xcassets */,
 				9C1FBEE02368256A00FFADF7 /* LaunchScreen.storyboard */,
 				9C1FBEE32368256A00FFADF7 /* Info.plist */,
 				9C1FBEDB2368256700FFADF7 /* MartianDemoApp.xcdatamodeld */,
@@ -149,8 +156,18 @@
 			children = (
 				9C1FBF002368695E00FFADF7 /* Animate+UIView.swift */,
 				9C10BB6D2369810B00E4BE4A /* Array+Extension.swift */,
+				9CDAA90F236AC146006452FD /* Realm+Extension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9CB1D9F9236B7DB900652355 /* SavedPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				9CB1D9FA236B7DE700652355 /* SavePhotoViewController.swift */,
+				9CB1D9FC236B7FCA00652355 /* SaveCollectionViewCell.swift */,
+			);
+			path = SavedPhoto;
 			sourceTree = "<group>";
 		};
 		D77598F5BB357A18F81DD2EA /* Pods */ = {
@@ -230,7 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C1FBEE22368256A00FFADF7 /* LaunchScreen.storyboard in Resources */,
-				9C1FBEDF2368256A00FFADF7 /* Assets.xcassets in Resources */,
+				9CB1D9F8236B7AB400652355 /* Assets.xcassets in Resources */,
 				9C1FBEDA2368256700FFADF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,12 +285,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C1FBF012368695E00FFADF7 /* Animate+UIView.swift in Sources */,
+				9CB1D9FD236B7FCA00652355 /* SaveCollectionViewCell.swift in Sources */,
 				9C1FBEEC236858EF00FFADF7 /* AlbumsViewControllerDataSource.swift in Sources */,
+				9CB1D9FB236B7DE700652355 /* SavePhotoViewController.swift in Sources */,
 				9C1FBEFE2368618700FFADF7 /* PhotoCollectionViewCell.swift in Sources */,
 				9C1FBED72368256700FFADF7 /* AlbumsViewController.swift in Sources */,
 				9C1FBEEE23685A4800FFADF7 /* PhotosViewControllerDataSource.swift in Sources */,
 				9C1FBEFC2368607800FFADF7 /* AlbumTableViewCell.swift in Sources */,
 				9C10BB6E2369810C00E4BE4A /* Array+Extension.swift in Sources */,
+				9CDAA910236AC146006452FD /* Realm+Extension.swift in Sources */,
 				9C6789F52368BDFC0039FEA9 /* PhotoRealm.swift in Sources */,
 				9C1FBEEA2368567D00FFADF7 /* PhotosViewController.swift in Sources */,
 				9C1FBEFA23685E2A00FFADF7 /* Photo.swift in Sources */,

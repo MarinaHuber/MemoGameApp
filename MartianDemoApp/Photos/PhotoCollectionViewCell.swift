@@ -7,28 +7,24 @@
 //
 
 import UIKit
-import AlamofireImage
+
 
 class PhotoCollectionViewCell: UICollectionViewCell {
-	@IBOutlet weak private var collectionImageView: UIImageView!
+	@IBOutlet weak var collectionImageView: UIImageView!
+	@IBOutlet weak var bookmark: UIButton!
 	
     // MARK: - Properties
-    private var photos: [Photo]?
-	// MARK: - Configuration
-	internal func configure(with photos: [Photo]?) {
-		guard let photos = self.photos else {
-			return
-		}
-		photos.forEach {
-			if let imageUrl = $0.url {
-			collectionImageView?.af_setImage(withURL: imageUrl,
-												  placeholderImage: nil,
-												  imageTransition: UIImageView.ImageTransition.crossDissolve(0.3),
-												  runImageTransitionIfCached: true,
-												  completion: nil)
-			   }
-			}
-		}
+     var photos: [Photo]?
 
+	override func awakeFromNib() {
+		super.awakeFromNib()
+
+	}
+	override func prepareForReuse() {
+		super.prepareForReuse()
+		collectionImageView?.image = nil
+	}
+
+	@IBAction func actionBookmark(_ sender: UIButton) {
+	}
 }
-

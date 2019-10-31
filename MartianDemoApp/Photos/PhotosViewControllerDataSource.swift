@@ -10,22 +10,15 @@ import UIKit
 
 class PhotosViewControllerDataSource: NSObject {
 
-// MARK: - Properties
+	// MARK: - Properties
 	private var photosList: [Photo] = []
 
-// MARK: - Init
-init(with photosList: [Photo], collectionView: UICollectionView) {
-	super.init()
-	self.photosList = photosList
-	collectionView.dataSource = self
-	collectionView.delegate = self
-	collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: "photoCell")
-
-	//self.registerCells(in: collectionView)
-}
-
-// MARK: - Helper
-	
+	// MARK: - Init
+	init(with photosList: [Photo], collectionView: UICollectionView) {
+		super.init()
+		self.photosList = photosList
+		collectionView.dataSource = self
+	}
 }
 
 // MARK: - DataSource
@@ -40,25 +33,27 @@ extension PhotosViewControllerDataSource: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell ?? PhotoCollectionViewCell()
-		//cell.configure(with: [photo])
-
+		if let imageString = photo.url {
+		 let urlObject = URL(string: imageString)
+			cell.collectionImageView?.af_setImage(withURL: urlObject!,
+											  placeholderImage: nil,
+											  imageTransition: UIImageView.ImageTransition.crossDissolve(0.3),
+											  runImageTransitionIfCached: true,
+											  completion: nil)
+		}
+//		let exists = AlbumRealm.isAlbumSavedById(photo.albumID!)
+//
+//		let newImage = exists ? UIImage(named: "bookmarked") :
+//		UIImage(named: "un_bookmark")
+//		cell.bookmark.setImage(newImage, for: .normal)
 		return cell
-	}
-}
-// MARK: - Delegate
-
-extension PhotosViewControllerDataSource: UICollectionViewDelegate {
-
-	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
 	}
 }
 
 // MARK: - Layout Cell
-
-extension PhotoCollectionViewCell: UICollectionViewDelegateFlowLayout {
+extension PhotosViewController: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-		return collectionView.bounds.size
+		return CGSize(width: 90, height: 70)
 	}
 }

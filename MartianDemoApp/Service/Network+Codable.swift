@@ -60,10 +60,6 @@ class NetworkApi {
 			do {
 				let decoder = JSONDecoder()
 				let photosDecoded = try decoder.decode([Photo].self, from: data)
-				for photo in photosDecoded {
-					print(photo.id ?? "")
-					}
-
 				completionHandler(photosDecoded, nil)
 
 			} catch let error {
@@ -71,5 +67,4 @@ class NetworkApi {
 			}
 			}.resume()
 	}
-
 }

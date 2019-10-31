@@ -13,12 +13,10 @@ import Foundation
 //	let album: [Album]?
 //}
 struct Album: Codable {
-	let userID: Int?
 	let id: Int?
     let title: String?
 
     enum CodingKeys: String, CodingKey {
-        case userID = "userId"
         case id
 		case title
     }

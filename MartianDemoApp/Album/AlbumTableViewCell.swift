@@ -8,18 +8,22 @@
 
 import UIKit
 
-typealias AlbumSelectionHandler = ([Album]?) -> Void
+typealias SelectionHandler = ([Album]?) -> Void
 
 class AlbumTableViewCell: UITableViewCell, AlbumSelectionProtocol {
+	
 	// MARK: - Properties
-	private var selectionHandler: AlbumSelectionHandler?
+	private var selectionHandler: SelectionHandler?
 	private var albums: [Album]?
 
-    // MARK: - LifeCycle
-    override func awakeFromNib() {
+	// MARK: - LifeCycle
+	override func awakeFromNib() {
 		super.awakeFromNib()
 		textLabel?.font = UIFont.boldSystemFont(ofSize: 18)
 		textLabel?.numberOfLines = 0
+		textLabel?.sizeToFit()
+		let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapAlbum))
+		self.contentView.addGestureRecognizer(tapRecognizer)
 
 	}
 
@@ -28,7 +32,13 @@ class AlbumTableViewCell: UITableViewCell, AlbumSelectionProtocol {
 		textLabel?.text = nil
 	}
 
-	// MARK: - Configuration
+	@objc func tapAlbum() {
+		if let albums = self.albums {
+			self.selectionHandler?(albums)
+		}
+	}
+
+	// MARK: - Configuration for data source and delegate block
 	internal func configure(with album: [Album]?) {
 		self.albums = album
 		albums?.forEach {
@@ -36,14 +46,13 @@ class AlbumTableViewCell: UITableViewCell, AlbumSelectionProtocol {
 		}
 	}
 
-	internal func configure(with selectionHandler: AlbumSelectionHandler?) {
+	internal func configure(with selectionHandler: SelectionHandler?) {
 		self.selectionHandler = selectionHandler
 	}
-
 }
-
+// MARK: - Configuration protocol for selection blocks
 protocol AlbumSelectionProtocol {
-    func configure(with selectionHandler: AlbumSelectionHandler?)
+	func configure(with selectionHandler: SelectionHandler?)
 }
 
 

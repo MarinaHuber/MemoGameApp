@@ -8,11 +8,16 @@
 
 import RealmSwift
 
-// MARK: - Photo
+// MARK: - PhotoModelRealm
+
+class PhotoList: Object {
+   let photoListItems = RealmSwift.List<PhotoRealm>()
+}
 class PhotoRealm: Object {
-	dynamic var albumID = Int()
-	dynamic var id = Int()
-	let url = String()
+	dynamic var albumID = 0
+	dynamic var id = 0
+	let url = ""
+	var photoData: NSData? = nil
 
 	override static func primaryKey() -> String? {
 		return "id"
