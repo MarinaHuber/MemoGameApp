@@ -28,6 +28,7 @@ SHSearchBar
 
 
 ## Nedostatci:
+Kudos i ostalo https://github.com/realm/realm-cocoa/issues/6163
 - Connecting APIClient and APIRouter was not finished successfully so I went end finished all through
   APIClient instead ( refactoring )- fixed
 - Error handling is not implemented fully
