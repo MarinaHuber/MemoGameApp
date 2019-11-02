@@ -24,6 +24,7 @@ Test interview demo
 Issues risen https://github.com/realm/realm-cocoa/issues/6163
 - Connecting Realm did not work in Xcode 11 and iOS13
 - Error handling is not implemented fully
+- no support for all sizes and iPad
 - PhotosViewController has logic for showing bookmark indictor from albumlVC- 
 - use concurency
 - improve game logic
