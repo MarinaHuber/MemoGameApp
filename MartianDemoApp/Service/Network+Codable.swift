@@ -7,7 +7,6 @@
 //
 
 import Alamofire
-import AlamofireImage
 
 enum NetworkResult<T> {
 	case success(T)
@@ -32,7 +31,6 @@ class NetworkApi {
 	public static func getAlbums(completionHandler: @escaping (_ result: [Album], Error?) -> Void) {
 		let request = APIServiceRouter.albums
 		Alamofire.request(request).responseJSON { (response) in
-			//debugPrint(response)
 			guard let data = response.data else { return }
 
 			do {
@@ -44,10 +42,10 @@ class NetworkApi {
 				completionHandler(albumDecoded, nil)
 
 			} catch let error {
-			debugPrint("Error serializing json:", error)
+				debugPrint("Error serializing json:", error)
 				completionHandler([], error)
 			}
-			}.resume()
+		}.resume()
 	}
 
 
@@ -55,7 +53,7 @@ class NetworkApi {
 		let request = APIServiceRouter.photosByAlbumID(albumID)
 		Alamofire.request(request).responseJSON { (response) in
 			guard let data = response.data else { return }
-			debugPrint(response)
+			//debugPrint(response)
 
 			do {
 				let decoder = JSONDecoder()
@@ -65,6 +63,12 @@ class NetworkApi {
 			} catch let error {
 				completionHandler ([], error as NSError?)
 			}
-			}.resume()
+		}.resume()
+	}
+
+    public static func getDataFromUrl(url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            completion(data, response, error)
+            }.resume()
 	}
 }

@@ -2,9 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ofJ-hw-kH8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +21,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mIA-lL-P46">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="7" minY="0.0" maxX="7" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" textLabel="tJG-iu-83Y" rowHeight="60" style="IBUITableViewCellStyleDefault" id="gWh-zr-472" customClass="AlbumTableViewCell" customModule="MartianDemoApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
@@ -37,7 +40,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -78,7 +81,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="photoCell" id="9r5-eQ-aIZ" customClass="PhotoCollectionViewCell" customModule="MartianDemoApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="photoCell" id="9r5-eQ-aIZ" customClass="PhotoCollectionViewCell" customModule="MartianDemoApp" customModuleProvider="target">
                                         <rect key="frame" x="85" y="0.0" width="244" height="230"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="h1e-UW-aYG">
@@ -90,11 +93,11 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgL-2L-lqQ">
-                                                    <rect key="frame" x="24" y="22" width="48" height="50"/>
+                                                    <rect key="frame" x="17" y="13" width="60.5" height="58"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="lgL-2L-lqQ" secondAttribute="height" multiplier="24:25" id="2tX-5Q-Z62"/>
-                                                        <constraint firstAttribute="height" constant="50" id="okn-cp-VHu"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="xF8-E2-f5K"/>
+                                                        <constraint firstAttribute="width" secondItem="lgL-2L-lqQ" secondAttribute="height" multiplier="26:25" id="2tX-5Q-Z62"/>
+                                                        <constraint firstAttribute="height" constant="58" id="okn-cp-VHu"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="xF8-E2-f5K"/>
                                                     </constraints>
                                                     <state key="normal" title="Button" image="un_bookmark"/>
                                                     <connections>
@@ -105,8 +108,8 @@
                                             <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lgL-2L-lqQ" secondAttribute="trailing" constant="20" symbolic="YES" id="gCU-ai-a3S"/>
-                                                <constraint firstItem="lgL-2L-lqQ" firstAttribute="top" secondItem="h1e-UW-aYG" secondAttribute="top" constant="22" id="iiO-Sl-t2y"/>
-                                                <constraint firstItem="lgL-2L-lqQ" firstAttribute="leading" secondItem="h1e-UW-aYG" secondAttribute="leading" constant="24" id="mfu-VN-bUb"/>
+                                                <constraint firstItem="lgL-2L-lqQ" firstAttribute="top" secondItem="h1e-UW-aYG" secondAttribute="top" constant="13" id="iiO-Sl-t2y"/>
+                                                <constraint firstItem="lgL-2L-lqQ" firstAttribute="leading" secondItem="h1e-UW-aYG" secondAttribute="leading" constant="17" id="mfu-VN-bUb"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="244" height="230"/>
@@ -154,26 +157,270 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Save Photo View Controller-->
         <scene sceneID="6RD-J1-OYD">
             <objects>
-                <viewController id="e49-ID-xIu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SavePhotoViewController" id="e49-ID-xIu" customClass="SavePhotoViewController" customModule="MartianDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5s8-gn-2D0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KzB-FR-OcB">
+                                <rect key="frame" x="0.0" y="86" width="414" height="810"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="joP-T6-ab8">
+                                    <size key="itemSize" width="263" height="235"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="savedCell" id="I0S-fq-U8D" customClass="SaveCollectionViewCell" customModule="MartianDemoApp" customModuleProvider="target">
+                                        <rect key="frame" x="75.5" y="0.0" width="263" height="235"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="roV-Hy-UxF">
+                                            <rect key="frame" x="0.0" y="0.0" width="263" height="235"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="t0M-Ay-aDq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="263" height="235"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="263" height="235"/>
+                                        <connections>
+                                            <outlet property="saveImageView" destination="t0M-Ay-aDq" id="Rtn-Pd-4DD"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="GrayLightMartian"/>
+                        <constraints>
+                            <constraint firstItem="KzB-FR-OcB" firstAttribute="top" secondItem="gtb-eS-tVX" secondAttribute="top" constant="42" id="2af-2h-aO8"/>
+                            <constraint firstItem="KzB-FR-OcB" firstAttribute="leading" secondItem="gtb-eS-tVX" secondAttribute="leading" id="3rg-Vx-C2x"/>
+                            <constraint firstItem="KzB-FR-OcB" firstAttribute="trailing" secondItem="gtb-eS-tVX" secondAttribute="trailing" id="E7q-ZJ-SQJ"/>
+                            <constraint firstAttribute="bottom" secondItem="KzB-FR-OcB" secondAttribute="bottom" id="xhR-cm-wbE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gtb-eS-tVX"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="KzB-FR-OcB" id="adi-Vi-v3P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dL-no-gcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2577" y="130"/>
+            <point key="canvasLocation" x="2576.811594202899" y="129.91071428571428"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="MV0-q7-laP">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" id="7GA-dN-ocH" customClass="GameViewController" customModule="MartianDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4wM-9M-Hqo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCb-44-LO9" userLabel="CardsContainer">
+                                <rect key="frame" x="0.0" y="174" width="414" height="508"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Oh-OE-vyT">
+                                        <rect key="frame" x="16" y="0.0" width="382" height="508"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4kj-f4-Nnp">
+                                                <rect key="frame" x="8" y="8" width="366" height="117"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbi-LD-6t1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb6-d5-Ntp">
+                                                        <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiR-M2-6GP">
+                                                        <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zo-lW-M8s">
+                                                        <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KXn-Dh-rn1">
+                                                <rect key="frame" x="8" y="133" width="366" height="117"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLk-wq-7g5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgl-zC-EOp">
+                                                        <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7x0-fw-PuR">
+                                                        <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6k-UG-iVr">
+                                                        <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7NX-hG-rRU">
+                                                <rect key="frame" x="8" y="258" width="366" height="117"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78M-di-onw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQX-jd-BNY">
+                                                        <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m43-2a-DJ6">
+                                                        <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F58-jA-Ttr">
+                                                        <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LnP-rM-v7J">
+                                                <rect key="frame" x="8" y="383" width="366" height="117"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kB6-eE-Jj8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amH-8K-mCF">
+                                                        <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHx-bB-rmf">
+                                                        <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKe-zC-Tc8">
+                                                        <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
+                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="I79-a2-5Ay">
+                                                <rect key="frame" x="8" y="504" width="366" height="0.0"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                            </stackView>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9Oh-OE-vyT" firstAttribute="top" secondItem="XCb-44-LO9" secondAttribute="top" id="1Lr-lR-pD9"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Oh-OE-vyT" secondAttribute="trailing" constant="16" id="kP9-nT-VZ3"/>
+                                    <constraint firstItem="9Oh-OE-vyT" firstAttribute="leading" secondItem="XCb-44-LO9" secondAttribute="leading" constant="16" id="lQx-O4-aVK"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Oh-OE-vyT" secondAttribute="bottom" id="wWF-QO-UHU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3c-mU-17y" userLabel="BottomContainer">
+                                <rect key="frame" x="0.0" y="682" width="414" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkB-n8-N9W" userLabel="Time Bonus">
+                                        <rect key="frame" x="207" y="25" width="0.0" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="CsP-sS-R2y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GkB-n8-N9W" firstAttribute="top" secondItem="l3c-mU-17y" secondAttribute="top" constant="25" id="ABa-Ld-KtA"/>
+                                    <constraint firstAttribute="height" constant="180" id="PdX-Cn-7zz"/>
+                                    <constraint firstItem="GkB-n8-N9W" firstAttribute="centerX" secondItem="l3c-mU-17y" secondAttribute="centerX" id="Tie-ZW-0l1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8V-0a-ycm" userLabel="TopContainer">
+                                <rect key="frame" x="0.0" y="44" width="414" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qO-jP-mlR">
+                                        <rect key="frame" x="16" y="47" width="63" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="tou-zh-S9x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Restart"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nadji duple karte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3b-gQ-xIr">
+                                        <rect key="frame" x="129" y="51" width="156" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="156" id="F2Z-Tr-HSG"/>
+                                            <constraint firstAttribute="height" constant="29" id="pJs-G1-Diy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="x3b-gQ-xIr" firstAttribute="centerX" secondItem="E8V-0a-ycm" secondAttribute="centerX" id="1v5-jg-O8g"/>
+                                    <constraint firstItem="x3b-gQ-xIr" firstAttribute="top" secondItem="E8V-0a-ycm" secondAttribute="top" constant="51" id="CIr-8Z-ceb"/>
+                                    <constraint firstItem="1qO-jP-mlR" firstAttribute="leading" secondItem="E8V-0a-ycm" secondAttribute="leading" constant="16" id="P00-nl-uR4"/>
+                                    <constraint firstItem="1qO-jP-mlR" firstAttribute="centerY" secondItem="E8V-0a-ycm" secondAttribute="centerY" id="Yel-0h-F3g"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1qO-jP-mlR" secondAttribute="trailing" constant="20" symbolic="YES" id="jwK-q1-5NF"/>
+                                    <constraint firstAttribute="height" constant="130" id="rnX-j1-kai"/>
+                                    <constraint firstAttribute="bottom" secondItem="x3b-gQ-xIr" secondAttribute="bottom" constant="50" id="xXf-fc-KRU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="GrayMartian"/>
+                        <constraints>
+                            <constraint firstItem="E8V-0a-ycm" firstAttribute="trailing" secondItem="JGc-hu-R4C" secondAttribute="trailing" id="1eW-gF-PgF"/>
+                            <constraint firstItem="l3c-mU-17y" firstAttribute="top" secondItem="XCb-44-LO9" secondAttribute="bottom" id="8pX-Z6-QdE"/>
+                            <constraint firstItem="XCb-44-LO9" firstAttribute="top" secondItem="E8V-0a-ycm" secondAttribute="bottom" id="IGt-dD-bxr"/>
+                            <constraint firstItem="XCb-44-LO9" firstAttribute="leading" secondItem="JGc-hu-R4C" secondAttribute="leading" id="KmY-hA-bU1"/>
+                            <constraint firstItem="E8V-0a-ycm" firstAttribute="top" secondItem="JGc-hu-R4C" secondAttribute="top" id="Knl-nS-gLm"/>
+                            <constraint firstItem="l3c-mU-17y" firstAttribute="trailing" secondItem="JGc-hu-R4C" secondAttribute="trailing" id="Zjf-Bc-oc9"/>
+                            <constraint firstItem="l3c-mU-17y" firstAttribute="leading" secondItem="JGc-hu-R4C" secondAttribute="leading" id="aa7-7q-OGw"/>
+                            <constraint firstItem="E8V-0a-ycm" firstAttribute="leading" secondItem="JGc-hu-R4C" secondAttribute="leading" id="hBb-yi-CFJ"/>
+                            <constraint firstItem="XCb-44-LO9" firstAttribute="trailing" secondItem="JGc-hu-R4C" secondAttribute="trailing" id="liV-lP-4JI"/>
+                            <constraint firstItem="l3c-mU-17y" firstAttribute="bottom" secondItem="JGc-hu-R4C" secondAttribute="bottom" id="qIV-s1-9yM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JGc-hu-R4C"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMZ-Ml-uBD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3333" y="130"/>
         </scene>
     </scenes>
     <resources>
         <image name="un_bookmark" width="256" height="256"/>
         <namedColor name="GrayLightMartian">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrayMartian">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="RedMartian">
             <color red="0.93725490196078431" green="0.25098039215686274" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

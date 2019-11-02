@@ -2,18 +2,19 @@
 //  PhotosViewControllerDataSource.swift
 //  MartianDemoApp
 //
-//  Created by Marina Huber on 10/29/19.
+//  Created by Marina Huber on 10/30/19.
 //  Copyright © 2019 Marina Huber. All rights reserved.
 //
 
 import UIKit
+import AlamofireImage
 
 class PhotosViewControllerDataSource: NSObject {
 
 	// MARK: - Properties
-	private var photosList: [Photo] = []
+	var photosList: [Photo]?
 
-	// MARK: - Init
+	// MARK: - Init for dependency injection
 	init(with photosList: [Photo], collectionView: UICollectionView) {
 		super.init()
 		self.photosList = photosList
@@ -21,31 +22,40 @@ class PhotosViewControllerDataSource: NSObject {
 	}
 }
 
-// MARK: - DataSource
+// MARK: - DataSource required
 extension PhotosViewControllerDataSource: UICollectionViewDataSource {
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		self.photosList.count
+		self.photosList?.count ?? 0
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let photo = self.photosList.item(at: indexPath.row) else {
-            return UICollectionViewCell()
-        }
+		guard let photo = self.photosList?.item(at: indexPath.row) else {
+			return UICollectionViewCell()
+		}
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell ?? PhotoCollectionViewCell()
 		if let imageString = photo.url {
-		 let urlObject = URL(string: imageString)
+			let urlObject = URL(string: imageString)
 			cell.collectionImageView?.af_setImage(withURL: urlObject!,
-											  placeholderImage: nil,
-											  imageTransition: UIImageView.ImageTransition.crossDissolve(0.3),
-											  runImageTransitionIfCached: true,
-											  completion: nil)
+												  placeholderImage: nil,
+												  imageTransition: UIImageView.ImageTransition.crossDissolve(0.3),
+												  runImageTransitionIfCached: true,
+												  completion: nil)
+			cell.saveBlock = {
+				if cell.isBookmarked == true {
+					UserDefaults.standard.images.append(photo)
+					UserDefaults.standard.synchronize()
+				} else {
+					//??this removes everything not just the item unselected
+					UserDefaults.standard.removeObject(forKey: "images")
+					UserDefaults.standard.synchronize()
+				}
+				let newImage = cell.isBookmarked ? UIImage(named: "bookmarked") :
+					UIImage(named: "un_bookmark")
+				cell.bookmark.setImage(newImage, for: .normal)
+
+			}
 		}
-//		let exists = AlbumRealm.isAlbumSavedById(photo.albumID!)
-//
-//		let newImage = exists ? UIImage(named: "bookmarked") :
-//		UIImage(named: "un_bookmark")
-//		cell.bookmark.setImage(newImage, for: .normal)
 		return cell
 	}
 }
@@ -54,6 +64,11 @@ extension PhotosViewControllerDataSource: UICollectionViewDataSource {
 extension PhotosViewController: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-		return CGSize(width: 90, height: 70)
+		return CGSize(width: 90, height: 80)
+	}
+
+	func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+
+		return UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
 	}
 }

@@ -2,12 +2,11 @@
 //  ViewController.swift
 //  MartianDemoApp
 //
-//  Created by Marina Huber on 10/29/19.
+//  Created by Marina Huber on 10/30/19.
 //  Copyright © 2019 Marina Huber. All rights reserved.
 //
 
 import UIKit
-import  RealmSwift
 
 class AlbumsViewController: UIViewController {
 
@@ -51,7 +50,7 @@ class AlbumsViewController: UIViewController {
 
 				$0.map {
 					let cell = self.tableView.cellForRow(at: $0)
-					cell?.animateStart(0.9, delay: Double($0.row) * 0.05, completion: {
+					cell?.animateStart(0.9, delay: Double($0.row) * 0.02, completion: {
 						completed in
 					})
 				}
@@ -72,7 +71,5 @@ class AlbumsViewController: UIViewController {
 			guard let id = $0.id else { return }
 			_ = id
 		}
-
 	}
-
 }

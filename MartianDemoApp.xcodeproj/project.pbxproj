@@ -24,12 +24,14 @@
 		9C1FBEFC2368607800FFADF7 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBEFB2368607800FFADF7 /* AlbumTableViewCell.swift */; };
 		9C1FBEFE2368618700FFADF7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBEFD2368618700FFADF7 /* PhotoCollectionViewCell.swift */; };
 		9C1FBF012368695E00FFADF7 /* Animate+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FBF002368695E00FFADF7 /* Animate+UIView.swift */; };
-		9C46A076236AABE1005C206F /* AlbumRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46A075236AABE1005C206F /* AlbumRealm.swift */; };
-		9C6789F52368BDFC0039FEA9 /* PhotoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6789F42368BDFC0039FEA9 /* PhotoRealm.swift */; };
+		9C55CB60236C821700CA1859 /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55CB5F236C821700CA1859 /* UserDefaults+Codable.swift */; };
+		9C76A777236D8E9600B3B5AF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76A776236D8E9600B3B5AF /* GameViewController.swift */; };
+		9C76A779236D8EC800B3B5AF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76A778236D8EC800B3B5AF /* Card.swift */; };
+		9C76A77B236D8EDA00B3B5AF /* Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76A77A236D8EDA00B3B5AF /* Matching.swift */; };
+		9C76A77D236D8FA800B3B5AF /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76A77C236D8FA800B3B5AF /* Int+Extension.swift */; };
 		9CB1D9F8236B7AB400652355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1D9F7236B7AB400652355 /* Assets.xcassets */; };
 		9CB1D9FB236B7DE700652355 /* SavePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1D9FA236B7DE700652355 /* SavePhotoViewController.swift */; };
 		9CB1D9FD236B7FCA00652355 /* SaveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1D9FC236B7FCA00652355 /* SaveCollectionViewCell.swift */; };
-		9CDAA910236AC146006452FD /* Realm+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDAA90F236AC146006452FD /* Realm+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,12 +55,14 @@
 		9C1FBEFB2368607800FFADF7 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		9C1FBEFD2368618700FFADF7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C1FBF002368695E00FFADF7 /* Animate+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animate+UIView.swift"; sourceTree = "<group>"; };
-		9C46A075236AABE1005C206F /* AlbumRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRealm.swift; sourceTree = "<group>"; };
-		9C6789F42368BDFC0039FEA9 /* PhotoRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRealm.swift; sourceTree = "<group>"; };
+		9C55CB5F236C821700CA1859 /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
+		9C76A776236D8E9600B3B5AF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		9C76A778236D8EC800B3B5AF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		9C76A77A236D8EDA00B3B5AF /* Matching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matching.swift; sourceTree = "<group>"; };
+		9C76A77C236D8FA800B3B5AF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		9CB1D9F7236B7AB400652355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CB1D9FA236B7DE700652355 /* SavePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhotoViewController.swift; sourceTree = "<group>"; };
 		9CB1D9FC236B7FCA00652355 /* SaveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCollectionViewCell.swift; sourceTree = "<group>"; };
-		9CDAA90F236AC146006452FD /* Realm+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Extension.swift"; sourceTree = "<group>"; };
 		EBE0E4C0F0B64CE8873762DF /* Pods-MartianDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MartianDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-MartianDemoApp/Pods-MartianDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +105,7 @@
 				9C1FBEEF23685AD500FFADF7 /* Album */,
 				9C1FBEF023685AF800FFADF7 /* Photos */,
 				9CB1D9F9236B7DB900652355 /* SavedPhoto */,
+				9C76A775236D8E7200B3B5AF /* Game */,
 				9C1FBED22368256700FFADF7 /* AppDelegate.swift */,
 				9C1FBED82368256700FFADF7 /* Main.storyboard */,
 				9CB1D9F7236B7AB400652355 /* Assets.xcassets */,
@@ -135,9 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				9C1FBEF723685D7400FFADF7 /* Album.swift */,
+				9C76A778236D8EC800B3B5AF /* Card.swift */,
+				9C76A77A236D8EDA00B3B5AF /* Matching.swift */,
 				9C1FBEF923685E2A00FFADF7 /* Photo.swift */,
-				9C46A075236AABE1005C206F /* AlbumRealm.swift */,
-				9C6789F42368BDFC0039FEA9 /* PhotoRealm.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,9 +161,18 @@
 			children = (
 				9C1FBF002368695E00FFADF7 /* Animate+UIView.swift */,
 				9C10BB6D2369810B00E4BE4A /* Array+Extension.swift */,
-				9CDAA90F236AC146006452FD /* Realm+Extension.swift */,
+				9C55CB5F236C821700CA1859 /* UserDefaults+Codable.swift */,
+				9C76A77C236D8FA800B3B5AF /* Int+Extension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9C76A775236D8E7200B3B5AF /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				9C76A776236D8E9600B3B5AF /* GameViewController.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		9CB1D9F9236B7DB900652355 /* SavedPhoto */ = {
@@ -284,23 +298,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C76A77B236D8EDA00B3B5AF /* Matching.swift in Sources */,
 				9C1FBF012368695E00FFADF7 /* Animate+UIView.swift in Sources */,
 				9CB1D9FD236B7FCA00652355 /* SaveCollectionViewCell.swift in Sources */,
+				9C76A77D236D8FA800B3B5AF /* Int+Extension.swift in Sources */,
+				9C76A779236D8EC800B3B5AF /* Card.swift in Sources */,
 				9C1FBEEC236858EF00FFADF7 /* AlbumsViewControllerDataSource.swift in Sources */,
 				9CB1D9FB236B7DE700652355 /* SavePhotoViewController.swift in Sources */,
+				9C76A777236D8E9600B3B5AF /* GameViewController.swift in Sources */,
 				9C1FBEFE2368618700FFADF7 /* PhotoCollectionViewCell.swift in Sources */,
 				9C1FBED72368256700FFADF7 /* AlbumsViewController.swift in Sources */,
 				9C1FBEEE23685A4800FFADF7 /* PhotosViewControllerDataSource.swift in Sources */,
 				9C1FBEFC2368607800FFADF7 /* AlbumTableViewCell.swift in Sources */,
 				9C10BB6E2369810C00E4BE4A /* Array+Extension.swift in Sources */,
-				9CDAA910236AC146006452FD /* Realm+Extension.swift in Sources */,
-				9C6789F52368BDFC0039FEA9 /* PhotoRealm.swift in Sources */,
+				9C55CB60236C821700CA1859 /* UserDefaults+Codable.swift in Sources */,
 				9C1FBEEA2368567D00FFADF7 /* PhotosViewController.swift in Sources */,
 				9C1FBEFA23685E2A00FFADF7 /* Photo.swift in Sources */,
 				9C1FBEDD2368256700FFADF7 /* MartianDemoApp.xcdatamodeld in Sources */,
 				9C1FBEF823685D7400FFADF7 /* Album.swift in Sources */,
 				9C1FBEF423685CB400FFADF7 /* ApiService.swift in Sources */,
-				9C46A076236AABE1005C206F /* AlbumRealm.swift in Sources */,
 				9C1FBED32368256700FFADF7 /* AppDelegate.swift in Sources */,
 				9C1FBEF623685CC600FFADF7 /* Network+Codable.swift in Sources */,
 			);
@@ -378,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -432,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -450,7 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = MartianDemoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,7 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = MartianDemoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

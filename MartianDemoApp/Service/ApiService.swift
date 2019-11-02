@@ -8,7 +8,6 @@
 
 import Alamofire
 
-
 public enum APIServiceRouter: URLRequestConvertible {
 
 	static let BASE_URL = "https://demo.martian.agency/api"
@@ -22,7 +21,7 @@ public enum APIServiceRouter: URLRequestConvertible {
 		request.addValue(APIServiceRouter.header_KEY, forHTTPHeaderField: "x-auth")
 		return request
 	}
-	 var path : String {
+	var path : String {
 		switch self {
 		case .albums:
 			return ("/albums")

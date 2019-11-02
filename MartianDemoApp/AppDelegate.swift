@@ -7,24 +7,21 @@
 //
 
 import UIKit
-import RealmSwift
 
-var myRealm = try! Realm()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+	
 	var window: UIWindow?
-
+	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		customizeUI()
 		return true
 	}
 }
 extension AppDelegate {
-
+	
 	func customizeUI() {
-		UINavigationBar.appearance().topItem?.title = " "
 		UINavigationBar.appearance().backgroundColor = .clear
 		UINavigationBar.appearance().barTintColor = .clear
 		UINavigationBar.appearance().tintColor = .black

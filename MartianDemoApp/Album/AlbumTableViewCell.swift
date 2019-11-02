@@ -2,7 +2,7 @@
 //  AlbumTableViewCell.swift
 //  MartianDemoApp
 //
-//  Created by Marina Huber on 10/29/19.
+//  Created by Marina Huber on 10/30/19.
 //  Copyright © 2019 Marina Huber. All rights reserved.
 //
 
@@ -38,7 +38,7 @@ class AlbumTableViewCell: UITableViewCell, AlbumSelectionProtocol {
 		}
 	}
 
-	// MARK: - Configuration for data source and delegate block
+	// MARK: - Configuration for data injection
 	internal func configure(with album: [Album]?) {
 		self.albums = album
 		albums?.forEach {
@@ -50,11 +50,7 @@ class AlbumTableViewCell: UITableViewCell, AlbumSelectionProtocol {
 		self.selectionHandler = selectionHandler
 	}
 }
-// MARK: - Configuration protocol for selection blocks
+// MARK: - Configuration protocol for navigation
 protocol AlbumSelectionProtocol {
 	func configure(with selectionHandler: SelectionHandler?)
 }
-
-
-
-

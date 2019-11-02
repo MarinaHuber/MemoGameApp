@@ -8,10 +8,7 @@
 
 import Foundation
 
-// MARK: - Album
-//struct AlbumList: Codable {
-//	let album: [Album]?
-//}
+// MARK: - Album Codable
 struct Album: Codable {
 	let id: Int?
     let title: String?

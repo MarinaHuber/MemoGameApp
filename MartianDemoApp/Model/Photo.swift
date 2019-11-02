@@ -8,15 +8,15 @@
 
 import Foundation
 
-// MARK: - Photo
+// MARK: - Photo Codable & UserDefaults
 struct Photo: Codable {
     let albumID, id: Int?
-    let title: String?
-    let url, thumbnailURL: String?
+	var url: String?
+	let isBookmarked: Bool = false
 
     enum CodingKeys: String, CodingKey {
         case albumID = "albumId"
-        case id, title, url
-        case thumbnailURL = "thumbnailUrl"
+        case id
+		case url
     }
 }
