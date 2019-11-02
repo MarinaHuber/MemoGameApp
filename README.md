@@ -1,5 +1,4 @@
 # MartianDemoApp
-Test interview demo
 
 ### Prerequisites
 - Swift 5
