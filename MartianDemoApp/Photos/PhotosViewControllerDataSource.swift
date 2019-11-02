@@ -47,6 +47,7 @@ extension PhotosViewControllerDataSource: UICollectionViewDataSource {
 					UserDefaults.standard.synchronize()
 				} else {
 					//??this removes everything not just the item unselected
+					//let lastImage = UserDefaults.standard.images.last
 					UserDefaults.standard.removeObject(forKey: "images")
 					UserDefaults.standard.synchronize()
 				}

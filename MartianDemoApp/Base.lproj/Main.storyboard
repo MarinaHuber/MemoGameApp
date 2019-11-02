@@ -233,21 +233,33 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="Hd7-uL-mNq"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb6-d5-Ntp">
                                                         <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="Rzd-mV-rHf"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiR-M2-6GP">
                                                         <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="aAx-wl-wGr"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zo-lW-M8s">
                                                         <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="5LN-hI-5Wx"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -258,21 +270,33 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="twx-lk-uKH"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgl-zC-EOp">
                                                         <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="EOH-TR-4Ss"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7x0-fw-PuR">
                                                         <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="dCO-sO-UZV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6k-UG-iVr">
                                                         <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="clQ-QR-rFU"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -283,21 +307,33 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="dIc-1b-uib"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQX-jd-BNY">
                                                         <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="zek-zW-olu"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m43-2a-DJ6">
                                                         <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="zKo-Xz-C0P"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F58-jA-Ttr">
                                                         <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="MMp-JC-Ar0"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -308,21 +344,33 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="Ftt-tO-slg"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amH-8K-mCF">
                                                         <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="B6Q-Bo-Gew"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHx-bB-rmf">
                                                         <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="I5H-UN-Rgf"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKe-zC-Tc8">
                                                         <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
                                                         <color key="backgroundColor" name="RedMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <connections>
+                                                            <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="3W0-tV-bYn"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -408,6 +456,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JGc-hu-R4C"/>
                     </view>
+                    <connections>
+                        <outletCollection property="cardButtons" destination="pbi-LD-6t1" collectionClass="NSMutableArray" id="z1m-kn-fAi"/>
+                        <outletCollection property="cardButtons" destination="Tb6-d5-Ntp" collectionClass="NSMutableArray" id="WKL-Mm-Jsf"/>
+                        <outletCollection property="cardButtons" destination="RiR-M2-6GP" collectionClass="NSMutableArray" id="Qfj-T2-LdC"/>
+                        <outletCollection property="cardButtons" destination="3zo-lW-M8s" collectionClass="NSMutableArray" id="XBR-M9-4cX"/>
+                        <outletCollection property="cardButtons" destination="bLk-wq-7g5" collectionClass="NSMutableArray" id="nGa-j9-dfC"/>
+                        <outletCollection property="cardButtons" destination="zgl-zC-EOp" collectionClass="NSMutableArray" id="1CS-uQ-y9k"/>
+                        <outletCollection property="cardButtons" destination="7x0-fw-PuR" collectionClass="NSMutableArray" id="CmV-U3-TWo"/>
+                        <outletCollection property="cardButtons" destination="M6k-UG-iVr" collectionClass="NSMutableArray" id="6ae-rZ-cIp"/>
+                        <outletCollection property="cardButtons" destination="78M-di-onw" collectionClass="NSMutableArray" id="vt6-fI-a1g"/>
+                        <outletCollection property="cardButtons" destination="kQX-jd-BNY" collectionClass="NSMutableArray" id="tI4-oI-MfF"/>
+                        <outletCollection property="cardButtons" destination="m43-2a-DJ6" collectionClass="NSMutableArray" id="RQj-Wr-Ogq"/>
+                        <outletCollection property="cardButtons" destination="F58-jA-Ttr" collectionClass="NSMutableArray" id="IxE-DN-IIi"/>
+                        <outletCollection property="cardButtons" destination="kB6-eE-Jj8" collectionClass="NSMutableArray" id="55h-hU-o33"/>
+                        <outletCollection property="cardButtons" destination="amH-8K-mCF" collectionClass="NSMutableArray" id="HJE-eO-sSU"/>
+                        <outletCollection property="cardButtons" destination="MHx-bB-rmf" collectionClass="NSMutableArray" id="S4f-gp-zna"/>
+                        <outletCollection property="cardButtons" destination="kKe-zC-Tc8" collectionClass="NSMutableArray" id="Hia-IY-ewR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMZ-Ml-uBD" sceneMemberID="firstResponder"/>
             </objects>
