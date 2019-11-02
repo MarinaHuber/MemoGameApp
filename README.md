@@ -6,9 +6,9 @@ Test interview demo
 - Xcode 11
 - iPhone
 
-# What I accomplish in This Demo
+# What I accomplish
 
-How to:
+- Implemented game card logic UI with JSONPlaceholder API(last screen)
 - use Cocoapod dependency for networking
 - CRUD with UserDefault
 - use MVC architecture
@@ -19,7 +19,7 @@ How to:
 - use static properties and static/mutating methods
 - use enumerate method
 
-# What I did not accomplish in This Demo
+# What I did not accomplish
 
 Issues risen https://github.com/realm/realm-cocoa/issues/6163
 - Connecting Realm did not work in Xcode 11 and iOS13
