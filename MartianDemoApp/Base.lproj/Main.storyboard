@@ -429,6 +429,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Restart"/>
+                                        <connections>
+                                            <action selector="resetAction:" destination="7GA-dN-ocH" eventType="touchUpInside" id="WlD-Hk-qp3"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nadji duple karte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3b-gQ-xIr">
                                         <rect key="frame" x="129" y="51" width="156" height="29"/>
@@ -468,6 +471,7 @@
                         <viewLayoutGuide key="safeArea" id="JGc-hu-R4C"/>
                     </view>
                     <connections>
+                        <outlet property="restartButton" destination="1qO-jP-mlR" id="3Lb-FG-G5R"/>
                         <outletCollection property="cardButtons" destination="pbi-LD-6t1" collectionClass="NSMutableArray" id="z1m-kn-fAi"/>
                         <outletCollection property="cardButtons" destination="Tb6-d5-Ntp" collectionClass="NSMutableArray" id="WKL-Mm-Jsf"/>
                         <outletCollection property="cardButtons" destination="RiR-M2-6GP" collectionClass="NSMutableArray" id="Qfj-T2-LdC"/>

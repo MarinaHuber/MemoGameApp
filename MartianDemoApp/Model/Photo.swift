@@ -12,7 +12,7 @@ import Foundation
 struct Photo: Codable {
     let albumID, id: Int?
 	var url: String?
-	let isBookmarked: Bool = false
+	var isBookmarked: Bool = false
 
     enum CodingKeys: String, CodingKey {
         case albumID = "albumId"

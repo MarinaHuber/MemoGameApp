@@ -10,6 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+	@IBOutlet weak var restartButton: UIButton!
 	private var imageUrls: Array<URL> = []
 	private var tempUrls: Array<URL> = []
 	private var images: Array<UIImage> = []
@@ -26,10 +27,14 @@ class GameViewController: UIViewController {
 		super.viewDidLoad()
 		if imagesSaved.count >= 16 {
 		loadCardImages()
-		} else {
-			self.alert(message: "Izaberite minimum 16 karata", title: "Nema dovoljno pohranjenih karata")
-		}
 		updateView()
+		restartButton.isHidden = true
+		} else {
+			for index in cardButtons.indices {
+				cardButtons?[index].isEnabled = false
+				self.alert(message: "Izaberite minimum 16 karata", title: "Nema dovoljno pohranjenih karata")
+			}
+		}
 	}
 
 	private func updateView() {
@@ -72,7 +77,6 @@ class GameViewController: UIViewController {
 				})
 			})
 
-				//showCongratulationLabel()
 
 			} else {
 				print("Not Matched!")
@@ -90,21 +94,15 @@ class GameViewController: UIViewController {
 						button2?.alpha = 1
 					})
 				})
-
-
-
 			}
 		}
 	}
-
-
 
 	// MARK: - Load on main threat
 	func loadCardImages() {
 		if imageUrls.isEmpty {
 			for (index,image) in imagesSaved.enumerated() {
 				if index < 8 {
-			//add here alert if not enough images min 9
 				if let urlImage = URL(string:image.url ?? "") {
 					self.imageUrls.append(urlImage)
 					self.tempUrls.append(urlImage)
@@ -149,6 +147,8 @@ class GameViewController: UIViewController {
 
 		}
 
+	}
+	@IBAction func resetAction(_ sender: Any) {
 	}
 
 	func alert(message: String, title: String) {

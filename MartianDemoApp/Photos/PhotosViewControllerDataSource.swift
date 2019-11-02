@@ -45,10 +45,10 @@ extension PhotosViewControllerDataSource: UICollectionViewDataSource {
 				if cell.isBookmarked == true {
 					UserDefaults.standard.images.append(photo)
 					UserDefaults.standard.synchronize()
+					_ = UserDefaults.standard.images.map { $0.isBookmarked == true }
 				} else {
-					//??this removes everything not just the item unselected
-					//let lastImage = UserDefaults.standard.images.last
-					UserDefaults.standard.removeObject(forKey: "images")
+					_ = UserDefaults.standard.images.map { $0.isBookmarked == false }
+					UserDefaults.standard.images.removeLast()
 					UserDefaults.standard.synchronize()
 				}
 				let newImage = cell.isBookmarked ? UIImage(named: "bookmarked") :
