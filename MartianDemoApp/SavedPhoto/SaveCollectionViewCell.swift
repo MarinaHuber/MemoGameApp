@@ -9,14 +9,14 @@
 import UIKit
 
 class SaveCollectionViewCell: UICollectionViewCell {
-
+	
 	@IBOutlet weak var saveImageView: UIImageView!
 	
 	// MARK: - LifeCycle
-    override func awakeFromNib() {
+	override func awakeFromNib() {
 		super.awakeFromNib()
 	}
-
+	
 	override func prepareForReuse() {
 		super.prepareForReuse()
 		saveImageView?.image = nil

@@ -10,11 +10,13 @@ import UIKit
 
 class PhotosViewController: UIViewController {
 	
+	// MARK: - Properties
 	@IBOutlet weak var photoCollectionView: UICollectionView!
 	private var dataSource: PhotosViewControllerDataSource?
 	private var albums: [Album]? = []
 	private var albumID: Int?
-	
+
+	// MARK: - LifeCycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		photoCollectionView.delegate = self

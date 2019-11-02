@@ -8,24 +8,6 @@
 
 import Alamofire
 
-enum NetworkResult<T> {
-	case success(T)
-	case failure(Error)
-
-	var isSuccess: Bool {
-		switch self {
-		case .failure:	return false
-		case .success:	return true
-		}
-	}
-	var value: T? {
-		switch self {
-		case .failure:				return nil
-		case .success(let value):	return value
-		}
-	}
-}
-
 class NetworkApi {
 
 	public static func getAlbums(completionHandler: @escaping (_ result: [Album], Error?) -> Void) {
@@ -48,7 +30,6 @@ class NetworkApi {
 		}.resume()
 	}
 
-
 	public static func getPhotosByAlbumID(_ albumID: Int, completionHandler: @escaping (_ result: [Photo], Error?) -> Void) {
 		let request = APIServiceRouter.photosByAlbumID(albumID)
 		Alamofire.request(request).responseJSON { (response) in
@@ -66,9 +47,9 @@ class NetworkApi {
 		}.resume()
 	}
 
-    public static func getDataFromUrl(url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            completion(data, response, error)
-            }.resume()
+	public static func getDataFromUrl(url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+		URLSession.shared.dataTask(with: url) { data, response, error in
+			completion(data, response, error)
+		}.resume()
 	}
 }

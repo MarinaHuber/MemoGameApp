@@ -21,20 +21,18 @@ class SavePhotoViewController: UIViewController {
 		collectionView.dataSource = self
 		collectionView.delegate = self
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(showGameVC))
-
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		 let imagesSaved = UserDefaults.standard.images
-		 if imagesSaved.count > 0 {
+		let imagesSaved = UserDefaults.standard.images
+		if imagesSaved.count > 0 {
 			self.title? = "Saved Images"
 		} else {
 			self.title? = "No images saved"
 		}
 		collectionView.reloadData()
 	}
-
 
 	@objc func showGameVC () {
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -56,7 +54,7 @@ extension SavePhotoViewController: UICollectionViewDataSource {
 		}
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "savedCell", for: indexPath) as? SaveCollectionViewCell ?? SaveCollectionViewCell()
 		if let urlObject = URL(string:photo.url ?? "") {
-				cell.saveImageView.af_setImage(withURL: urlObject, placeholderImage: UIImage(), filter: nil, progress: nil, progressQueue: DispatchQueue.main, imageTransition: UIImageView.ImageTransition.crossDissolve(0.1), runImageTransitionIfCached: false, completion: nil)
+			cell.saveImageView.af_setImage(withURL: urlObject, placeholderImage: UIImage(), filter: nil, progress: nil, progressQueue: DispatchQueue.main, imageTransition: UIImageView.ImageTransition.crossDissolve(0.1), runImageTransitionIfCached: false, completion: nil)
 		}
 		return cell
 	}

@@ -140,9 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				9C1FBEF723685D7400FFADF7 /* Album.swift */,
+				9C1FBEF923685E2A00FFADF7 /* Photo.swift */,
 				9C76A778236D8EC800B3B5AF /* Card.swift */,
 				9C76A77A236D8EDA00B3B5AF /* Matching.swift */,
-				9C1FBEF923685E2A00FFADF7 /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

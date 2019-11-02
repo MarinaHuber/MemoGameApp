@@ -28,7 +28,6 @@ class GameViewController: UIViewController {
 		if imagesSaved.count >= 16 {
 		loadCardImages()
 		updateView()
-		restartButton.isHidden = true
 		} else {
 			for index in cardButtons.indices {
 				cardButtons?[index].isEnabled = false
