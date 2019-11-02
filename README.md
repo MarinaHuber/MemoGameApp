@@ -24,7 +24,7 @@ How to:
 Issues risen https://github.com/realm/realm-cocoa/issues/6163
 - Connecting Realm did not work in Xcode 11 and iOS13
 - Error handling is not implemented fully
-- PhotosViewController has logic for shoving bookmark indictor from detailVC- 
+- PhotosViewController has logic for showing bookmark indictor from albumlVC- 
 - use concurency
 - improve game logic
 - uploading an image or album to phone Directory
