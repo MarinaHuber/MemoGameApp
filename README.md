@@ -8,10 +8,10 @@
 # App UI Flow
 Application consists of four different pages.
 
-Initial Page: This is the beginning page of the application. You can see listed all titles of albums downloaded
-Album Page: each album contains many images (cards) here you can save or remove them
-Saved cards Page: overview of saved cards
-Game Page: When click on "play" barButton app is navigated to that page
+- Initial Page: This is the beginning page of the application. You can see listed all titles of albums downloaded
+- Album Page: each album contains many images (cards) here you can save or remove them
+- Saved cards Page: overview of saved cards
+- Game Page: When click on "play" barButton app is navigated to that page
 
 ## What I did
 
