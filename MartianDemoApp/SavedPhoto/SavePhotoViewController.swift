@@ -64,11 +64,11 @@ extension SavePhotoViewController: UICollectionViewDataSource {
 extension SavePhotoViewController: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-		return CGSize(width: 90, height: 100)
+		return CGSize(width: 90, height: 110)
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 
-		return UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+		return UIEdgeInsets(top: 20, left: 15, bottom: 10, right: 15)
 	}
 }

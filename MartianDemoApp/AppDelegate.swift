@@ -21,12 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
 	
 	func customizeUI() {
-		UINavigationBar.appearance().backgroundColor = .clear
-		UINavigationBar.appearance().barTintColor = .clear
-		UINavigationBar.appearance().tintColor = .black
-		UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
-		UINavigationBar.appearance().shadowImage = UIImage()
-		UINavigationBar.appearance().layer.shadowColor = UIColor.clear.cgColor
+
+		guard let navigationController = self.window?.rootViewController as? UINavigationController else { return }
+		let red = UIColor(named: "RedMartian")
+		let white = UIColor(named: "WhiteMartian")
+		navigationController.navigationBar.backgroundColor = .clear
+		navigationController.navigationBar.barTintColor = red
+		navigationController.navigationBar.tintColor = white
+		navigationController.navigationBar.titleTextAttributes = [.foregroundColor : white as Any]
 	}
 }
 

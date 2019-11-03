@@ -6,6 +6,8 @@
 //  Copyright © 2019 Marina Huber. All rights reserved.
 //
 
+// Kudos to this project github:
+
 import Foundation
 
 struct Matching {
@@ -66,5 +68,4 @@ struct Matching {
 //            print(randomCard)
         }
     }
-
 }

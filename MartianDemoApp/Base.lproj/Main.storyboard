@@ -73,8 +73,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GnK-lC-rdd">
-                                <rect key="frame" x="0.0" y="85" width="414" height="811"/>
-                                <color key="backgroundColor" name="GrayLightMartian"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="srd-1e-YCb">
                                     <size key="itemSize" width="244" height="230"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -122,9 +122,9 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" name="RedMartian"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="GnK-lC-rdd" firstAttribute="top" secondItem="bRi-0j-unE" secondAttribute="top" constant="41" id="QBO-fG-MMh"/>
+                            <constraint firstItem="GnK-lC-rdd" firstAttribute="top" secondItem="bRi-0j-unE" secondAttribute="top" id="QBO-fG-MMh"/>
                             <constraint firstAttribute="bottomMargin" secondItem="GnK-lC-rdd" secondAttribute="bottom" constant="-34" id="bNv-0E-4Ic"/>
                             <constraint firstItem="GnK-lC-rdd" firstAttribute="leading" secondItem="bRi-0j-unE" secondAttribute="leading" id="c8E-lv-Abl"/>
                             <constraint firstItem="GnK-lC-rdd" firstAttribute="centerX" secondItem="klN-Te-Lks" secondAttribute="centerX" id="vOe-cE-B9p"/>
@@ -167,7 +167,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KzB-FR-OcB">
-                                <rect key="frame" x="0.0" y="86" width="414" height="810"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="joP-T6-ab8">
                                     <size key="itemSize" width="263" height="235"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -207,9 +208,9 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" name="GrayLightMartian"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="KzB-FR-OcB" firstAttribute="top" secondItem="gtb-eS-tVX" secondAttribute="top" constant="42" id="2af-2h-aO8"/>
+                            <constraint firstItem="KzB-FR-OcB" firstAttribute="top" secondItem="gtb-eS-tVX" secondAttribute="top" id="2af-2h-aO8"/>
                             <constraint firstItem="KzB-FR-OcB" firstAttribute="leading" secondItem="gtb-eS-tVX" secondAttribute="leading" id="3rg-Vx-C2x"/>
                             <constraint firstItem="KzB-FR-OcB" firstAttribute="trailing" secondItem="gtb-eS-tVX" secondAttribute="trailing" id="E7q-ZJ-SQJ"/>
                             <constraint firstAttribute="bottom" secondItem="KzB-FR-OcB" secondAttribute="bottom" id="xhR-cm-wbE"/>
@@ -243,7 +244,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbi-LD-6t1">
                                                         <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="Hd7-uL-mNq"/>
@@ -251,7 +252,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb6-d5-Ntp">
                                                         <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="Rzd-mV-rHf"/>
@@ -259,7 +260,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiR-M2-6GP">
                                                         <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="aAx-wl-wGr"/>
@@ -267,7 +268,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zo-lW-M8s">
                                                         <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="5LN-hI-5Wx"/>
@@ -280,7 +281,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLk-wq-7g5">
                                                         <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="twx-lk-uKH"/>
@@ -288,7 +289,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgl-zC-EOp">
                                                         <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="EOH-TR-4Ss"/>
@@ -296,7 +297,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7x0-fw-PuR">
                                                         <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="dCO-sO-UZV"/>
@@ -304,7 +305,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6k-UG-iVr">
                                                         <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="clQ-QR-rFU"/>
@@ -317,7 +318,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78M-di-onw">
                                                         <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="dIc-1b-uib"/>
@@ -325,7 +326,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQX-jd-BNY">
                                                         <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="zek-zW-olu"/>
@@ -333,7 +334,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m43-2a-DJ6">
                                                         <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="zKo-Xz-C0P"/>
@@ -341,7 +342,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F58-jA-Ttr">
                                                         <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="MMp-JC-Ar0"/>
@@ -354,7 +355,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kB6-eE-Jj8">
                                                         <rect key="frame" x="0.0" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="Ftt-tO-slg"/>
@@ -362,7 +363,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amH-8K-mCF">
                                                         <rect key="frame" x="93.5" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="B6Q-Bo-Gew"/>
@@ -370,7 +371,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHx-bB-rmf">
                                                         <rect key="frame" x="187" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="I5H-UN-Rgf"/>
@@ -378,7 +379,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKe-zC-Tc8">
                                                         <rect key="frame" x="280.5" y="0.0" width="85.5" height="117"/>
-                                                        <color key="backgroundColor" name="RedMartian"/>
+                                                        <color key="backgroundColor" name="GrayMartian"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <connections>
                                                             <action selector="selectCard:" destination="7GA-dN-ocH" eventType="touchUpInside" id="3W0-tV-bYn"/>
@@ -441,7 +442,7 @@
                                             <constraint firstAttribute="height" constant="29" id="pJs-G1-Diy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -456,7 +457,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="GrayMartian"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="E8V-0a-ycm" firstAttribute="trailing" secondItem="JGc-hu-R4C" secondAttribute="trailing" id="1eW-gF-PgF"/>
                             <constraint firstItem="l3c-mU-17y" firstAttribute="top" secondItem="XCb-44-LO9" secondAttribute="bottom" id="8pX-Z6-QdE"/>
@@ -499,14 +500,8 @@
     <resources>
         <image name="bookmarked" width="256" height="256"/>
         <image name="un_bookmark" width="256" height="256"/>
-        <namedColor name="GrayLightMartian">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="GrayMartian">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="RedMartian">
-            <color red="0.93725490196078431" green="0.25098039215686274" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

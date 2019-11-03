@@ -41,8 +41,7 @@ class PhotosViewController: UIViewController {
 	private func setDateSource(with photos: [Photo]) {
 		self.dataSource = PhotosViewControllerDataSource(with: photos, collectionView: self.photoCollectionView)
 	}
-	
-	
+		
 	// MARK: - Helper navigation
 	func configure(with albums: [Album]) {
 		self.albums = albums
