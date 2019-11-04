@@ -42,3 +42,4 @@ extension AlbumsViewControllerDataSource: UITableViewDataSource {
 		return cell
 	}
 }
+

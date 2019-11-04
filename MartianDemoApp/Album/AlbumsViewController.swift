@@ -73,3 +73,9 @@ class AlbumsViewController: UIViewController {
 		}
 	}
 }
+
+extension UINavigationController {
+   open override var preferredStatusBarStyle: UIStatusBarStyle {
+      return navigationController?.preferredStatusBarStyle ?? .lightContent
+   }
+}

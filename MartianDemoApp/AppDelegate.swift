@@ -32,4 +32,8 @@ extension AppDelegate {
 	}
 }
 
+//var preferredStatusBarStyle: UIStatusBarStyle {
+//    return .lightContent
+//}
+
 

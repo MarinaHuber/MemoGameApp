@@ -27,7 +27,7 @@ class PhotosViewController: UIViewController {
 	override func viewWillLayoutSubviews() {
 		photoCollectionView.layoutIfNeeded()
 	}
-	
+
 	@objc func loadPhotos() {
 		albums?.forEach {
 			guard let albumID = $0.id else { return }
@@ -38,6 +38,7 @@ class PhotosViewController: UIViewController {
 			})
 		}
 	}
+	
 	private func setDateSource(with photos: [Photo]) {
 		self.dataSource = PhotosViewControllerDataSource(with: photos, collectionView: self.photoCollectionView)
 	}
