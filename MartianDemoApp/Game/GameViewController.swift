@@ -122,12 +122,12 @@ class GameViewController: UIViewController {
 	// MARK: - Data into UIImage
 	func downloadImage(url: URL) {
 		//  print("Download Started")
-		NetworkApi.getDataFromUrl(url: url) { data, response, error in
+		NetworkApi.getDataFromUrl(url: url) { data, error in
 			guard let data = data, error == nil else { return }
 
-			print(response?.suggestedFilename ?? url.lastPathComponent)
+			//print(response?.suggestedFilename ?? url.lastPathComponent)
 			print(#file, #line, #function, "Download Finished")
-
+//error nil
 			self.images.append(UIImage(data: data)!)
 		}
 	}

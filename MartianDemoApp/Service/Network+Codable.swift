@@ -47,9 +47,17 @@ class NetworkApi {
 		}.resume()
 	}
 
-	public static func getDataFromUrl(url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-		URLSession.shared.dataTask(with: url) { data, response, error in
-			completion(data, response, error)
-		}.resume()
+	public static func getDataFromUrl(url: URL, completionHandler: @escaping (Data?, Error?) -> ()) {
+		//Nil error albums do not have image:String need to get data for photo
+		let request = APIServiceRouter.albums
+		Alamofire.request(request).responseData { (response) in
+			guard let data = response.data else { return }
+					completionHandler(data, nil)
+
+				}.resume()
+
+//		URLSession.shared.dataTask(with: url) { data, response, error in
+//			completion(data, response, error)
+//		}.resume()
 	}
 }
