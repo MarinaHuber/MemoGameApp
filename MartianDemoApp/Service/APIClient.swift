@@ -22,7 +22,7 @@ extension APIClient {
 
         let task = session.dataTask(with: request) { data, response, error in
             guard let httpResponse = response as? HTTPURLResponse else {
-                completion(nil, .requestFailed)
+                completion(nil, .parametersNil)
                 return
             }
             if httpResponse.statusCode == 200 {
@@ -49,14 +49,14 @@ extension APIClient {
                     if let error = error {
                         completion(Result.failure(error))
                     } else {
-                        completion(Result.failure(.invalidData))
+                        completion(Result.failure(.missingURL))
                     }
                     return
                 }
                 if let value = decode(json) {
                     completion(.success(value))
                 } else {
-                    completion(.failure(.jsonParsingFailure))
+                    completion(.failure(.decodingFailed))
                 }
             }
         }

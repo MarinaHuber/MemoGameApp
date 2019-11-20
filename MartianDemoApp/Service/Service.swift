@@ -26,7 +26,7 @@ class Service: APIClient {
     convenience init() {
         self.init(configuration: .default)
     }
-
+   //in the signature of the function in the success case we define the Class type thats is the generic one in the API
 	class func request<T: Codable>(router: FeedRouter, completion: @escaping (Result<[T], Error>) -> ()) {
 
 		var components = URLComponents()
@@ -43,7 +43,7 @@ class Service: APIClient {
 		session.dataTask(with: urlRequest) { data, response, error in
 
 			guard error == nil else {
-				completion(.failure(error!))
+				completion(.failure(APIError.missingURL))
 				return
 			}
 			guard let data = data else { return }
@@ -54,8 +54,8 @@ class Service: APIClient {
 					completion(.success(responseObject))
 				}
 
-			} catch let error {
-				completion (.failure(error))
+			} catch _ {
+				completion (.failure(APIError.decodingFailed))
 			}
 
 		}.resume()

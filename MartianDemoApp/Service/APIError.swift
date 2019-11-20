@@ -9,14 +9,14 @@
 import Foundation
 
 enum APIError: Error {
-    case requestFailed
-    case invalidData
-    case jsonParsingFailure
+    case parametersNil
+    case decodingFailed
+    case missingURL
     var localizedDescription: String {
         switch self {
-        case .requestFailed: return "Request Failed"
-        case .invalidData: return "Invalid Data"
-        case .jsonParsingFailure: return "JSON Parsing Failure"
+        case .parametersNil: return "Parameters were nil"
+        case .decodingFailed: return "Parameter encoding fai;ed"
+        case .missingURL: return "URL is nil"
         }
     }
 }
