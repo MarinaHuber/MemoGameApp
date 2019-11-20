@@ -31,11 +31,15 @@ class PhotosViewController: UIViewController {
 	@objc func loadPhotos() {
 		albums?.forEach {
 			guard let albumID = $0.id else { return }
-			NetworkApi.getPhotosByAlbumID(albumID, completionHandler: {
-				photosLoaded, error in
-				self.setDateSource(with: photosLoaded)
-				self.photoCollectionView.reloadData()
-			})
+			Service.request(router: FeedRouter.getImagesByAlbumId(albumID)) { (result: Result<[Photo], Error>) in
+				switch result {
+				case .success:
+					_ = result.map { self.setDateSource(with: $0) }
+					self.photoCollectionView.reloadData()
+				case .failure:
+					print(result)
+				}
+			}
 		}
 	}
 	

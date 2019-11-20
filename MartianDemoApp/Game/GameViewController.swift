@@ -11,9 +11,9 @@ import UIKit
 class GameViewController: UIViewController {
 
 	@IBOutlet weak var restartButton: UIButton!
-	private var imageUrls: Array<URL> = []
-	private var tempUrls: Array<URL> = []
-	private var images: Array<UIImage> = []
+	private var imageUrls: [URL] = []
+	private var tempUrls: [URL] = []
+	private var images: [UIImage] = []
 	private var imagesSaved: [Photo] = UserDefaults.standard.images
 
 	private lazy var game = Matching(numberOfPairsOfCards: numberOfPairsOfCards)
@@ -26,12 +26,12 @@ class GameViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		if imagesSaved.count >= 16 {
-		loadCardImages()
-		updateView()
+			loadCardImages()
+			updateView()
 		} else {
 			for index in cardButtons.indices {
 				cardButtons?[index].isEnabled = false
-				self.alert(message: "Izaberite minimum 16 karata", title: "Nema dovoljno pohranjenih karata")
+				self.presentAlert(message: "Izaberite minimum 16 karata", title: "Nema dovoljno pohranjenih karata")
 			}
 		}
 	}
@@ -121,13 +121,9 @@ class GameViewController: UIViewController {
 
 	// MARK: - Data into UIImage
 	func downloadImage(url: URL) {
-		//  print("Download Started")
-		NetworkApi.getDataFromUrl(url: url) { data, error in
+		Service.getDataFromUrl(url: url) { data, error in
 			guard let data = data, error == nil else { return }
-
-			//print(response?.suggestedFilename ?? url.lastPathComponent)
 			print(#file, #line, #function, "Download Finished")
-//error nil
 			self.images.append(UIImage(data: data)!)
 		}
 	}
@@ -148,16 +144,6 @@ class GameViewController: UIViewController {
 
 	}
 	@IBAction func resetAction(_ sender: Any) {
-	}
-
-	func alert(message: String, title: String) {
-		DispatchQueue.main.async {
-			let alertController = UIAlertController(title: title, message:   message, preferredStyle: .alert)
-			let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-			alertController.addAction(OKAction)
-			self.present(alertController, animated: true)
-		}
-
 	}
 
 

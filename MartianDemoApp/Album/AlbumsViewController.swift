@@ -27,11 +27,16 @@ class AlbumsViewController: UIViewController {
 
 	// MARK: - Setup
 	func loadAlbums() {
-		NetworkApi.getAlbums(completionHandler: {
-			albumsLoaded, error in
-			self.setDateSource(with: albumsLoaded)
-			self.reloadTableUIAnimate()
-		})
+		Service.request(router: FeedRouter.getAlbums) { (result: Result<[Album], Error>) in
+			switch result {
+			case .success:
+				_ = result.map { self.setDateSource(with: $0) }
+
+				self.reloadTableUIAnimate()
+			case .failure:
+				print(result)
+			}
+		}
 	}
 
 	private func setDateSource(with albums: [Album]) {
