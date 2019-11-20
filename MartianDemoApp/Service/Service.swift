@@ -8,7 +8,24 @@
 
 import Foundation
 
-class Service {
+class Service: APIClient {
+
+	/// Help integrate with class func
+	/// - Parameters:
+	///   - request: error hendle for request
+	///   - decode: serialization error
+	///   - completion: with Result
+	internal func fetch<T>(with request: URLRequest, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void) where T : Decodable {
+	}
+
+	var session: URLSession
+    init(configuration: URLSessionConfiguration) {
+        self.session = URLSession(configuration: configuration)
+    }
+
+    convenience init() {
+        self.init(configuration: .default)
+    }
 
 	class func request<T: Codable>(router: FeedRouter, completion: @escaping (Result<[T], Error>) -> ()) {
 
@@ -49,8 +66,4 @@ class Service {
 			completion(data, error)
 		}.resume()
 	}
-
 }
-
-
-
