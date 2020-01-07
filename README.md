@@ -1,4 +1,4 @@
-# MartianDemoApp
+# MaemoGameApp
 
 ### Prerequisites
 - Swift 5
