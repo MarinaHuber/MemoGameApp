@@ -1,4 +1,4 @@
-# MaemoGameApp
+# MemoGameApp
 
 ### Prerequisites
 - Swift 5
